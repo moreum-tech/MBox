@@ -30,11 +30,18 @@ Rust ile yazılmış, yüksek performanslı, S3 uyumlu nesne depolama sistemi.
 
 ---
 
-### DigiMR - Elektronik İmza Kütüphanesi
+### DigiMR - Elektronik İmza
 
-Elektronik imza kütüphanesi.
+Türk elektronik imza platformu — CAdES, PAdES, XAdES, JAdES, ASiC-E. EYP 1.3/2.0, KEP, KamuSM TSA, mobil imza.
 
-[Yakında](digimr/)
+| Bileşen | Açıklama | Son Sürüm |
+|---------|----------|-----------|
+| [API Sunucu](digimr/api/) | REST API sunucu dosyası | v0.1.0 |
+| [Token Agent](digimr/agent/) | Donanım token erişimi için yerel PKCS#11 köprüsü | v0.1.0 |
+| [Docker](digimr/docker/) | Docker image ve compose | v0.1.0 |
+| [SDK - C#](digimr/sdk/csharp/) | .NET istemci kütüphanesi | v0.1.0 |
+
+[Tüm DigiMR indirmelerini görüntüle](digimr/)
 
 ---
 

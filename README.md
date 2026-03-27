@@ -30,11 +30,18 @@ High-performance, S3-compatible object storage written in Rust.
 
 ---
 
-### DigiMR - Electronic Signature Library
+### DigiMR - Electronic Signature
 
-Electronic signature library.
+Turkish electronic signature platform — CAdES, PAdES, XAdES, JAdES, ASiC-E. EYP 1.3/2.0, KEP, KamuSM TSA, mobile signature.
 
-[Coming soon](digimr/)
+| Component | Description | Latest |
+|-----------|-------------|--------|
+| [API Server](digimr/api/) | REST API server binary | v0.1.0 |
+| [Token Agent](digimr/agent/) | Local PKCS#11 bridge for hardware tokens | v0.1.0 |
+| [Docker](digimr/docker/) | Docker image and compose | v0.1.0 |
+| [SDK - C#](digimr/sdk/csharp/) | .NET client library | v0.1.0 |
+
+[View all DigiMR downloads](digimr/)
 
 ---
 
