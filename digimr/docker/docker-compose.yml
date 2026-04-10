@@ -1,0 +1,36 @@
+services:
+  digimr:
+    image: digimr:v1.1.0
+    container_name: digimr
+    ports:
+      - "7701:7701"
+      - "7702:7702"
+    volumes:
+      - digimr-data:/app/data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - TSA_MODE=free
+      - Kestrel__Endpoints__Local__Url=http://0.0.0.0:7701
+      - Kestrel__Endpoints__Local__Protocols=Http1AndHttp2
+      - Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:7702
+      - Kestrel__Endpoints__Grpc__Protocols=Http2
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:7701/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    restart: unless-stopped
+
+  # Optional: SoftHSM2 PKCS#11 proxy for testing (remove in production)
+  # softhsm:
+  #   image: vegardit/softhsm2-pkcs11-proxy
+  #   ports:
+  #     - "2345:2345"
+  #   environment:
+  #     - SOFTHSM_TOKEN_LABEL=TestToken
+  #     - SOFTHSM_TOKEN_PIN=1234
+  #     - SOFTHSM_TOKEN_SO_PIN=12345678
+
+volumes:
+  digimr-data:
