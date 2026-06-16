@@ -4,7 +4,7 @@
 
 MStore server and CLI binary. The tar.gz archive includes both `mstore-server` and `mstore` (CLI).
 
-**Download:** [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-linux-amd64.tar.gz) (v0.2.0)
+**Download:** [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz) (v0.3.0)
 
 ---
 

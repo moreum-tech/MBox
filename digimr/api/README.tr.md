@@ -4,7 +4,7 @@
 
 Elektronik imza, dogrulama, zaman damgasi, EYP ve KEP islemleri icin REST API sunucusu.
 
-**Indir:** [digimr-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-linux-amd64.tar.gz) (v1.1.0)
+**Indir:** [digimr-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-linux-amd64.tar.gz) (v2.0.0)
 
 Bagimsiz binary — .NET runtime gerekmez.
 
