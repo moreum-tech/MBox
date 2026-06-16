@@ -2,7 +2,7 @@
 
 # MStore Docker
 
-**Download:** [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) (v0.3.0)
+**Download:** [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) (v0.3.0) — OCI image, works with **Docker and Podman**
 
 ---
 
@@ -10,10 +10,10 @@
 
 ```bash
 # Load the image from release archive
-docker load < mstore-docker.tar.gz
+docker load < mstore-docker.tar.gz      # Podman: podman load < mstore-docker.tar.gz
 
 # Run
-docker run -d --name mstore \
+docker run -d --name mstore \           # Podman: replace `docker` with `podman`
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
   mstore:v0.3.0
