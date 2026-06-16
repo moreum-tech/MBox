@@ -4,7 +4,7 @@
 
 High-performance, S3-compatible object storage written in Rust.
 
-**Latest release:** [v0.2.0](https://github.com/moreum-tech/MBox/releases/tag/mstore-v0.2.0)
+**Latest release:** [v0.3.0](https://github.com/moreum-tech/MBox/releases/tag/mstore-v0.3.0)
 
 ---
 
@@ -12,13 +12,13 @@ High-performance, S3-compatible object storage written in Rust.
 
 | File | Description |
 |------|-------------|
-| [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-linux-amd64.tar.gz) | Server + CLI binary (Linux x86_64) |
-| [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-docker.tar.gz) | Docker image (`docker load`) |
+| [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz) | Server + CLI binary (Linux x86_64) |
+| [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) | Docker image (`docker load`) |
 
 ```bash
 # Download all
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-linux-amd64.tar.gz
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz
 ```
 
 ## Components

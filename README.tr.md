@@ -16,8 +16,8 @@ Rust ile yazilmis yuksek performansli, S3 uyumlu nesne depolama sunucusu.
 
 | Bilesen | Son Surum | Indir |
 |---------|-----------|-------|
-| [Sunucu + CLI](mstore/server/) | v0.2.0 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-linux-amd64.tar.gz) |
-| [Docker](mstore/docker/) | v0.2.0 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-docker.tar.gz) |
+| [Sunucu + CLI](mstore/server/) | v0.3.0 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz) |
+| [Docker](mstore/docker/) | v0.3.0 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) |
 
 [Tum MStore surumleri](https://github.com/moreum-tech/MBox/releases?q=mstore)
 
