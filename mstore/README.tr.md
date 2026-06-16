@@ -4,7 +4,7 @@
 
 Rust ile yazilmis yuksek performansli, S3 uyumlu nesne depolama sunucusu.
 
-**Son surum:** [v0.2.0](https://github.com/moreum-tech/MBox/releases/tag/mstore-v0.2.0)
+**Son surum:** [v0.3.0](https://github.com/moreum-tech/MBox/releases/tag/mstore-v0.3.0)
 
 ---
 
@@ -12,13 +12,13 @@ Rust ile yazilmis yuksek performansli, S3 uyumlu nesne depolama sunucusu.
 
 | Dosya | Aciklama |
 |-------|----------|
-| [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-linux-amd64.tar.gz) | Sunucu + CLI binary (Linux x86_64) |
-| [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-docker.tar.gz) | Docker imaji (`docker load`) |
+| [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz) | Sunucu + CLI binary (Linux x86_64) |
+| [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) | Docker imaji (`docker load`) |
 
 ```bash
 # Tumu indir
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-linux-amd64.tar.gz
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz
 ```
 
 ## Bilesenler
