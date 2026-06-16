@@ -4,7 +4,9 @@
 
 Turk elektronik imza platformu. CAdES, PAdES, XAdES, JAdES, ASiC-E imzalama ve dogrulama icin bagimsiz REST API.
 
-**Son surum:** [v1.1.0](https://github.com/moreum-tech/MBox/releases/tag/digimr-v1.1.0)
+**Son surum:** [v2.0.0](https://github.com/moreum-tech/MBox/releases/tag/digimr-v2.0.0)
+
+> ⚠️ **v2.0.0 geriye donuk uyumsuz degisiklikler icerir** (v1.x'e gore) — string-path API kaldirildi, tek `byte[]` tabanli yuzey kaldi. Migration icin `digimr-docs.tar.gz` icindeki `CHANGELOG.md` dosyasina bakin.
 
 ---
 
@@ -12,25 +14,25 @@ Turk elektronik imza platformu. CAdES, PAdES, XAdES, JAdES, ASiC-E imzalama ve d
 
 | Dosya | Aciklama |
 |-------|----------|
-| [digimr-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-linux-amd64.tar.gz) | API sunucu binary (Linux x86_64) |
-| [digimr-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-docker.tar.gz) | Docker imaji (`docker load`) |
-| [digimr-sdk-1.0.0-all.jar](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-sdk-1.0.0-all.jar) | Java SDK fat JAR |
+| [digimr-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-linux-amd64.tar.gz) | API sunucu binary (Linux x86_64) |
+| [digimr-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-docker.tar.gz) | Docker imaji (`docker load`) |
+| [digimr-sdk-1.0.0-all.jar](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-sdk-1.0.0-all.jar) | Java SDK fat JAR |
 
 ```bash
 # Tumu indir
-wget https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-linux-amd64.tar.gz
-wget https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-docker.tar.gz
-wget https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-sdk-1.0.0-all.jar
+wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-linux-amd64.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-sdk-1.0.0-all.jar
 ```
 
-### Dokumantasyon (v1.1.0 release asset)
+### Dokumantasyon ve ornekler (release asset)
 
 | Dosya | Aciklama |
 |-------|----------|
-| [REST_API_KILAVUZU.md](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/REST_API_KILAVUZU.md) | REST API referansi |
-| [GRPC_API_KILAVUZU.md](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/GRPC_API_KILAVUZU.md) | gRPC API referansi |
-| [JAVA_SDK_KILAVUZU.md](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/JAVA_SDK_KILAVUZU.md) | Java SDK kilavuzu |
-| [DOTNET_SDK_KILAVUZU.md](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/DOTNET_SDK_KILAVUZU.md) | .NET SDK kilavuzu |
+| [digimr-docs.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-docs.tar.gz) | Gelistirici dokumantasyonu (API referansi, kurulum, imza formatlari, CHANGELOG) |
+| [digimr-dotnet-examples.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-dotnet-examples.tar.gz) | .NET ornek projeleri |
+| [digimr-java-examples.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-java-examples.tar.gz) | Java ornek programlari |
+| [docker-compose.demo.yml](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/docker-compose.demo.yml) | Hazir calistir compose yapilandirmasi |
 
 ## Bilesenler
 

@@ -6,7 +6,7 @@ Local agent for hardware token and smartcard access. Runs on port 5555 and bridg
 
 In hybrid mode, the signing PIN never leaves the user's computer.
 
-The Token Agent binary is included in the [API server package](https://github.com/moreum-tech/MBox/releases/download/digimr-v1.1.0/digimr-linux-amd64.tar.gz).
+The Token Agent binary is included in the [API server package](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-linux-amd64.tar.gz).
 
 ---
 

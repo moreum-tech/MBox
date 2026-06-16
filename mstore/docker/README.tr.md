@@ -2,7 +2,7 @@
 
 # MStore Docker
 
-**Indir:** [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.2.0/mstore-docker.tar.gz) (v0.2.0)
+**Indir:** [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) (v0.3.0)
 
 ---
 
@@ -16,7 +16,7 @@ docker load < mstore-docker.tar.gz
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.2.0
+  mstore:v0.3.0
 ```
 
 ## Docker Compose
@@ -24,7 +24,7 @@ docker run -d --name mstore \
 ```yaml
 services:
   mstore:
-    image: mstore:v0.2.0
+    image: mstore:v0.3.0
     ports:
       - "9010:9010"
       - "9011:9011"
@@ -56,7 +56,7 @@ docker stop mstore && docker rm mstore
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.2.0
+  mstore:v0.3.0
 ```
 
 Veriler volume'da saklanir ve konteyner guncellemelerinde korunur.
