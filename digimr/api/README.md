@@ -4,7 +4,7 @@
 
 REST API server for electronic signature, verification, timestamp, EYP, and KEP operations.
 
-**Download:** [digimr-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.0/digimr-linux-amd64.tar.gz) (v2.0.0)
+**Download:** [digimr-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.1/digimr-linux-amd64.tar.gz) (v2.0.1)
 
 Self-contained binary — no .NET runtime required.
 
