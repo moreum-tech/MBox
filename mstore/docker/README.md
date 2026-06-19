@@ -2,7 +2,7 @@
 
 # MStore Docker
 
-**Download:** [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) (v0.3.0) — OCI image, works with **Docker and Podman**
+**Download:** [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz) (v0.3.1) — OCI image, works with **Docker and Podman**
 
 ---
 
@@ -16,7 +16,7 @@ docker load < mstore-docker.tar.gz      # Podman: podman load < mstore-docker.ta
 docker run -d --name mstore \           # Podman: replace `docker` with `podman`
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.0
+  mstore:v0.3.1
 ```
 
 ## Docker Compose
@@ -24,7 +24,7 @@ docker run -d --name mstore \           # Podman: replace `docker` with `podman`
 ```yaml
 services:
   mstore:
-    image: mstore:v0.3.0
+    image: mstore:v0.3.1
     ports:
       - "9010:9010"
       - "9011:9011"
@@ -56,7 +56,7 @@ docker stop mstore && docker rm mstore
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.0
+  mstore:v0.3.1
 ```
 
 Data is stored in volumes and persists across container updates.

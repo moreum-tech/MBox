@@ -4,7 +4,7 @@
 
 High-performance, S3-compatible object storage written in Rust.
 
-**Latest release:** [v0.3.0](https://github.com/moreum-tech/MBox/releases/tag/mstore-v0.3.0)
+**Latest release:** [v0.3.1](https://github.com/moreum-tech/MBox/releases/tag/mstore-v0.3.1)
 
 ---
 
@@ -12,14 +12,14 @@ High-performance, S3-compatible object storage written in Rust.
 
 | File | Platform | Description |
 |------|----------|-------------|
-| [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz) | Linux x86_64 | Server + CLI binary (`mstore-server`, `mstore`) |
-| [mstore-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-windows-amd64.zip) | Windows x86_64 | Server + CLI binary (`mstore-server.exe`, `mstore.exe`) |
-| [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz) | Docker / Podman | OCI image (`docker load` / `podman load`) |
+| [mstore-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-linux-amd64.tar.gz) | Linux x86_64 | Server + CLI binary (`mstore-server`, `mstore`) |
+| [mstore-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-windows-amd64.zip) | Windows x86_64 | Server + CLI binary (`mstore-server.exe`, `mstore.exe`) |
+| [mstore-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz) | Docker / Podman | OCI image (`docker load` / `podman load`) |
 
 ```bash
 # Download (Linux)
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-linux-amd64.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz
 ```
 
 ## Components
