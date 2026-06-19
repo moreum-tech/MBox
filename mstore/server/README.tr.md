@@ -4,7 +4,7 @@
 
 MStore sunucu ve CLI binary. tar.gz arsivi hem `mstore-server` hem `mstore` (CLI) icerir.
 
-**Indir:** [Linux x86_64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-linux-amd64.tar.gz) · [Windows x86_64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.0/mstore-windows-amd64.zip) (v0.3.0)
+**Indir:** [Linux x86_64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-linux-amd64.tar.gz) · [Windows x86_64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-windows-amd64.zip) (v0.3.1)
 
 ---
 
