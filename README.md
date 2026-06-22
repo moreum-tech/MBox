@@ -29,9 +29,9 @@ Turkish electronic signature platform — CAdES, PAdES, XAdES, JAdES, ASiC-E. EY
 
 | Component | Latest | Download |
 |-----------|--------|----------|
-| [API Server](digimr/api/) | v2.0.1 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.1/digimr-linux-amd64.tar.gz) |
-| [Docker](digimr/docker/) | v2.0.1 | [Image](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.1/digimr-docker.tar.gz) |
-| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.1/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
+| [API Server](digimr/api/) | v2.1.0 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.1.0/digimr-linux-amd64.tar.gz) |
+| [Docker](digimr/docker/) | v2.1.0 | [Image](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.1.0/digimr-docker.tar.gz) |
+| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.1.0/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
 
 [All DigiMR releases](https://github.com/moreum-tech/MBox/releases?q=digimr)
 
