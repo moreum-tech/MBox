@@ -10,6 +10,19 @@ Token Agent binary'si [API sunucu paketine](https://github.com/moreum-tech/MBox/
 
 ---
 
+## Tarayici / Web Imza Agent'i (Windows)
+
+Dogrudan web sayfasindan imzalamak icin (JavaScript Web SDK), hafif standalone agent indirilir —
+tek dosya, self-contained `digimr-agent-win-x64.exe` (~3 MB, .NET gerektirmez). Cift tikla calistir;
+kurulum/unzip yok.
+
+- **Indirme:** En guncel [DigiMR surumunden](https://github.com/moreum-tech/MBox/releases?q=digimr) `digimr-agent-win-x64.exe`.
+- **Su an yalniz Windows** — native PIN penceresi Windows'a ozel; macOS/Linux yakinda.
+
+`http://localhost:5555` uzerinde calisir ve asagidaki Token Agent ile ayni token API'sini sunar.
+
+---
+
 ## Kurulum
 
 ```bash

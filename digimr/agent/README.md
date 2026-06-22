@@ -10,6 +10,19 @@ The Token Agent binary is included in the [API server package](https://github.co
 
 ---
 
+## Browser / Web Signing Agent (Windows)
+
+For signing directly from a web page (the JavaScript Web SDK), download the lightweight standalone
+agent — a single self-contained `digimr-agent-win-x64.exe` (~3 MB, no .NET runtime required).
+Double-click to run; no install or unzip step.
+
+- **Download:** `digimr-agent-win-x64.exe` from the latest [DigiMR release](https://github.com/moreum-tech/MBox/releases?q=digimr).
+- **Windows only for now** — the native PIN window is Windows-only; macOS/Linux are coming soon.
+
+It runs on `http://localhost:5555` and exposes the same token API as the Token Agent below.
+
+---
+
 ## Installation
 
 ```bash
