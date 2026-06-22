@@ -2,7 +2,7 @@
 
 # DigiMR Docker
 
-**Download:** [digimr-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.0.1/digimr-docker.tar.gz) (v2.0.1)
+**Download:** [digimr-docker.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.1.0/digimr-docker.tar.gz) (v2.1.0)
 
 ---
 
@@ -20,7 +20,7 @@ docker run -d --name digimr \
   -e Kestrel__Endpoints__Local__Protocols=Http1AndHttp2 \
   -e Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:7702 \
   -e Kestrel__Endpoints__Grpc__Protocols=Http2 \
-  digimr:v2.0.1
+  digimr:v2.1.0
 ```
 
 ```bash
@@ -90,7 +90,7 @@ docker run -d --name digimr \
   -e Kestrel__Endpoints__Local__Protocols=Http1AndHttp2 \
   -e Kestrel__Endpoints__Grpc__Url=http://0.0.0.0:7702 \
   -e Kestrel__Endpoints__Grpc__Protocols=Http2 \
-  digimr:v2.0.1
+  digimr:v2.1.0
 ```
 
 Data is stored in volumes and persists across container updates.
