@@ -29,9 +29,9 @@ Turk elektronik imza platformu — CAdES, PAdES, XAdES, JAdES, ASiC-E. EYP 1.3/2
 
 | Bilesen | Son Surum | Indir |
 |---------|-----------|-------|
-| [API Sunucu](digimr/api/) | v2.2.0 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.0/digimr-linux-amd64.tar.gz) |
-| [Docker](digimr/docker/) | v2.2.0 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.0/digimr-docker.tar.gz) |
-| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.0/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
+| [API Sunucu](digimr/api/) | v2.2.1 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.1/digimr-linux-amd64.tar.gz) |
+| [Docker](digimr/docker/) | v2.2.1 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.1/digimr-docker.tar.gz) |
+| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.1/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
 
 [Tum DigiMR surumleri](https://github.com/moreum-tech/MBox/releases?q=digimr)
 
