@@ -6,7 +6,7 @@ Donanim token ve akilli kart erisimi icin yerel agent. Port 5555 uzerinde calisi
 
 Hibrit modda imzalama PIN'i asla kullanicinin bilgisayarindan cikmaz.
 
-Token Agent binary'si [API sunucu paketine](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.0/digimr-linux-amd64.tar.gz) dahildir.
+Token Agent binary'si [API sunucu paketine](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.2.1/digimr-linux-amd64.tar.gz) dahildir.
 
 ---
 
