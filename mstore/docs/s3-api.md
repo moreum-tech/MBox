@@ -1,6 +1,6 @@
 # MStore S3 API Referansı / S3 API Reference
 
-> Sürüm / Version: **v0.3.1** · Varsayılan uç nokta / Default endpoint: `http://<host>:9010`
+> Sürüm / Version: **v0.4.0** · Varsayılan uç nokta / Default endpoint: `http://<host>:9010`
 
 ## İçindekiler / Table of Contents
 
