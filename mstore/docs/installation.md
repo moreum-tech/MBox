@@ -158,8 +158,9 @@ Ayrıntılı Compose örnekleri (tek node, çoklu disk, 3-node cluster):
 curl http://127.0.0.1:9010/minio/health/live
 curl http://127.0.0.1:9010/minio/health/ready
 
-# Sürüm bilgisi
-curl http://127.0.0.1:9010/mstore/api/v1/version
+# Sürüm bilgisi — yönetim API'si olduğu için root ya da `s3:AdminAll` yetkili
+# bir kimlikle SigV4 imzalı istek ister; imzasız çağrı 403 döner.
+# Ayrıntı: s3-api.md → Yönetim API'si
 
 # AWS CLI ile uçtan uca test
 aws configure set aws_access_key_id     DEGISTIRIN
@@ -368,8 +369,9 @@ Detailed Compose examples (single node, multi-drive, 3-node cluster):
 curl http://127.0.0.1:9010/minio/health/live
 curl http://127.0.0.1:9010/minio/health/ready
 
-# Version info
-curl http://127.0.0.1:9010/mstore/api/v1/version
+# Version info — this is admin API surface, so it needs a SigV4-signed request
+# from root or an identity granted `s3:AdminAll`; unsigned calls get a 403.
+# See s3-api.md → Admin API
 
 # End-to-end test with the AWS CLI
 aws configure set aws_access_key_id     CHANGE-ME
