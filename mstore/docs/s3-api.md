@@ -58,6 +58,14 @@ curl "http://127.0.0.1:9010/mstore/presign?bucket=my-bucket&key=dosya.pdf&method
 | DeleteObjects (toplu silme) | `POST /{bucket}?delete` |
 | POST Object (form upload) | `POST /{bucket}` |
 
+> **Yetkilendirme.** Bucket işlemleri de politika denetiminden geçer.
+> `CreateBucket`, `DeleteBucket` ve `HeadBucket` ilgili bucket üzerinde açık bir
+> izin ister (`s3:CreateBucket`, `s3:DeleteBucket`, `s3:HeadBucket` — ya da
+> `s3:*`); izni olmayan kimlik `403 AccessDenied` alır. `ListBuckets` ise hata
+> vermek yerine **süzülür**: her kimlik yalnızca görmeye yetkili olduğu
+> bucket'ları listeler. root tümünü görür; anonim istek yalnızca bucket
+> politikasıyla açılmış olanları görür.
+
 ### Bucket alt kaynakları
 
 Her biri `GET` (oku), `PUT` (yaz) ve çoğu `DELETE` (kaldır) destekler:
@@ -232,6 +240,24 @@ Yanıt:
 | `GET /tiers` · `GET /tiers/status` | Katmanlama durumu |
 | `POST /service/restart` · `POST /service/stop` | Servis kontrolü |
 
+**Yetkilendirme.** Yönetim API'si ve web konsolu yalnızca **root** kullanıcıya,
+ya da kendisine açıkça `s3:AdminAll` verilmiş bir IAM kimliğine açıktır. Kimlik
+doğrulamış olmak tek başına yeterli **değildir** — yetkisiz istekler
+`403 AccessDenied` alır. Bir kullanıcıya yönetim yetkisi vermek için:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    { "Effect": "Allow", "Action": "s3:AdminAll", "Resource": "arn:mstore:admin:::*" }
+  ]
+}
+```
+
+Yönetim kaynağı (`arn:mstore:admin:::*`) bilinçli olarak `arn:aws:s3:::` ad
+alanının dışındadır; böylece sıradan bir "tam S3 erişimi" politikası
+(`arn:aws:s3:::*` üzerinde `s3:*`) yanlışlıkla yönetim yetkisi vermez.
+
 Öksüz veri geri kazanımının ayrıntıları: [orphan-reclamation.md](orphan-reclamation.md)
 
 ### Web Konsol
@@ -390,6 +416,14 @@ curl "http://127.0.0.1:9010/mstore/presign?bucket=my-bucket&key=file.pdf&method=
 | ListObjectVersions | `GET /{bucket}?versions` |
 | DeleteObjects (bulk) | `POST /{bucket}?delete` |
 | POST Object (form upload) | `POST /{bucket}` |
+
+> **Authorization.** Bucket operations are policy-checked too. `CreateBucket`,
+> `DeleteBucket` and `HeadBucket` require an explicit grant on the bucket in
+> question (`s3:CreateBucket`, `s3:DeleteBucket`, `s3:HeadBucket` — or `s3:*`);
+> an identity without one gets `403 AccessDenied`. `ListBuckets` is **filtered**
+> instead of refused: every identity sees only the buckets it is allowed to
+> list. root sees all of them; an anonymous request sees only those opened up by
+> a bucket policy.
 
 ### Bucket sub-resources
 
@@ -564,6 +598,24 @@ Response:
 | `GET/POST/DELETE /accesspoints`, `/accesspoints/{name}` | Access points |
 | `GET /tiers` · `GET /tiers/status` | Tiering status |
 | `POST /service/restart` · `POST /service/stop` | Service control |
+
+**Authorization.** The admin API and the web console are open to **root** only,
+or to an IAM identity that has been granted `s3:AdminAll` explicitly. Being
+authenticated is **not** sufficient — unauthorized requests get
+`403 AccessDenied`. To grant a user admin rights:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    { "Effect": "Allow", "Action": "s3:AdminAll", "Resource": "arn:mstore:admin:::*" }
+  ]
+}
+```
+
+The admin resource (`arn:mstore:admin:::*`) deliberately sits outside the
+`arn:aws:s3:::` namespace, so an ordinary "full S3 access" policy (`s3:*` on
+`arn:aws:s3:::*`) never confers admin rights by accident.
 
 Orphan reclamation details: [orphan-reclamation.md](orphan-reclamation.md)
 
