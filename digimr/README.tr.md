@@ -10,6 +10,20 @@ Turk elektronik imza platformu. CAdES, PAdES, XAdES, JAdES, ASiC-E imzalama ve d
 
 ---
 
+## Dokumantasyon
+
+Tum urun dokumantasyonu [docs/](docs/) klasorundedir — **okumak icin hicbir sey kurmaniza gerek yok**. Icerik `digimr-docs.tar.gz` ile birlikte gelen metnin aynisidir.
+
+| Belge | Kapsam |
+|-------|--------|
+| [Genel bakis](docs/tr/GENEL_BAKIS.md) | DigiMR nedir, neleri imzalayabilir |
+| [Kurulum rehberi](docs/tr/KURULUM_REHBERI.md) | Ikili dosyalar, systemd, Docker, TLS, boyutlandirma |
+| [REST API referansi](docs/tr/API_REFERANS.md) | Tum endpoint'ler, semalar ve hata kodlari |
+| [.NET SDK referansi](docs/tr/SDK_REFERANS.md) | Tam tip ve metot referansi |
+| [Ornekler](docs/tr/ORNEKLER.md) | 17 uctan uca senaryo (C# + curl) |
+| [Imza formatlari](docs/tr/IMZA_FORMATLARI.md) | CAdES / XAdES / PAdES / ASiC, B-B … B-LTA seviyeleri |
+| [Tum belgeler →](docs/README.tr.md) | Agent kurulumu, saglayicilar, KEP, TSA, mobil imza, mevzuat |
+
 ## Indirmeler
 
 | Dosya | Aciklama |

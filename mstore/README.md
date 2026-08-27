@@ -8,6 +8,20 @@ High-performance, S3-compatible object storage written in Rust.
 
 ---
 
+## Documentation
+
+Full product documentation lives in [docs/](docs/) — **nothing needs to be installed to read it**.
+
+| Document | What it covers |
+|----------|----------------|
+| [Installation](docs/installation.md) | Binaries, systemd, zero-config mode, first bucket |
+| [Configuration](docs/configuration.md) | Every `config.toml` field, CLI flag and env var |
+| [S3 API](docs/s3-api.md) | S3 HTTP API, presigned URLs, admin API, AWS SDK examples |
+| [gRPC API](docs/grpc-api.md) | Native gRPC API — 18 RPCs, streaming, batch, error model |
+| [SDK Reference](docs/sdk-reference.md) | Rust, Python, Go, Java, .NET, JS/TS clients and the CLI |
+| [Docker deployment](docs/docker-deployment.md) | Container image, compose, volumes |
+| [All documents →](docs/README.md) | Multi-drive, multi-node, deployment scenarios, operations |
+
 ## Downloads
 
 | File | Platform | Description |

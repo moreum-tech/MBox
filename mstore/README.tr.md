@@ -8,6 +8,20 @@ Rust ile yazilmis yuksek performansli, S3 uyumlu nesne depolama sunucusu.
 
 ---
 
+## Dokumantasyon
+
+Tum urun dokumantasyonu [docs/](docs/) klasorundedir — **okumak icin hicbir sey kurmaniza gerek yok**.
+
+| Belge | Kapsam |
+|-------|--------|
+| [Kurulum](docs/installation.md) | Ikili dosyalar, systemd, sifir yapilandirma modu, ilk bucket |
+| [Yapilandirma](docs/configuration.md) | Tum `config.toml` alanlari, CLI secenekleri, ortam degiskenleri |
+| [S3 API](docs/s3-api.md) | S3 HTTP API, presigned URL, yonetim API'si, AWS SDK ornekleri |
+| [gRPC API](docs/grpc-api.md) | Dogal gRPC API — 18 RPC, streaming, batch, hata modeli |
+| [SDK Referansi](docs/sdk-reference.md) | Rust, Python, Go, Java, .NET, JS/TS istemcileri ve CLI |
+| [Docker kurulumu](docs/docker-deployment.md) | Container imaji, compose, birimler |
+| [Tum belgeler →](docs/README.tr.md) | Coklu disk, coklu dugum, dagitim senaryolari, isletim |
+
 ## Indirmeler
 
 | Dosya | Platform | Aciklama |

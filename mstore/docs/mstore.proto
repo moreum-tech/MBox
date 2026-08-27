@@ -1,0 +1,355 @@
+syntax = "proto3";
+
+package mstore.v1;
+
+// ── Object Storage Service ────────────────────────────────────────────────────
+//
+// Küçük dosya (< 4 MB): PutObject / GetObject — tek mesaj, düşük latency
+// Büyük dosya (>= 4 MB): PutObjectStream / GetObjectStream — chunk streaming
+//
+// C# tarafında `MStoreClient` wrapper bu seçimi otomatik yapar.
+// Uygulama kodu sadece Put(path, data) / Get(path) çağırır.
+
+service ObjectStorage {
+  // ── Küçük objeler (< 4 MB) ────────────────────────────────────────────────
+  rpc PutObject       (PutObjectRequest)    returns (PutObjectResponse);
+  rpc GetObject       (GetObjectRequest)    returns (GetObjectResponse);
+  rpc HeadObject      (HeadObjectRequest)   returns (ObjectInfo);
+  rpc DeleteObject    (DeleteObjectRequest) returns (DeleteObjectResponse);
+  rpc ListObjects     (ListObjectsRequest)  returns (ListObjectsResponse);
+
+  // ── Büyük objeler: streaming (>= 4 MB) ───────────────────────────────────
+  // Client → Server: N adet DataChunk gönderir, son chunk'ta is_last=true
+  rpc PutObjectStream (stream PutChunk)     returns (PutObjectResponse);
+  // Server → Client: N adet DataChunk gönderir
+  rpc GetObjectStream (GetObjectRequest)    returns (stream GetChunk);
+
+  // ── Multipart (>= 4 MB, internal — PutObjectStream'in altında kullanılır) ─
+  rpc CreateMultipartUpload  (CreateMultipartRequest)   returns (CreateMultipartResponse);
+  rpc UploadPart             (stream UploadPartChunk)   returns (UploadPartResponse);
+  rpc CompleteMultipartUpload(CompleteMultipartRequest) returns (PutObjectResponse);
+  rpc AbortMultipartUpload   (AbortMultipartRequest)    returns (Empty);
+
+  // ── Batch operations ───────────────────────────────────────────────────
+  rpc DeleteObjects (DeleteObjectsRequest)   returns (DeleteObjectsResponse);
+  rpc PutObjects    (stream PutObjectsChunk) returns (stream PutObjectResult);
+  rpc GetObjects    (GetObjectsRequest)      returns (stream GetObjectResult);
+
+  // ── Bucket ────────────────────────────────────────────────────────────────
+  rpc CreateBucket (CreateBucketRequest) returns (Empty);
+  rpc DeleteBucket (DeleteBucketRequest) returns (Empty);
+  rpc ListBuckets  (ListBucketsRequest)  returns (ListBucketsResponse);
+  rpc HeadBucket   (HeadBucketRequest)   returns (BucketInfo);
+}
+
+// ── Common ────────────────────────────────────────────────────────────────────
+
+message Empty {}
+
+// ── Put (small) ───────────────────────────────────────────────────────────────
+
+message PutObjectRequest {
+  string bucket              = 1;
+  string key                 = 2;
+  bytes  data                = 3;  // Entire object, <= 4 MB
+  string content_type        = 4;
+  string storage_class       = 5;  // STANDARD | REDUCED_REDUNDANCY
+  map<string, string> metadata = 6;
+  // Optional client-side BLAKE3 checksum for integrity verification
+  bytes  checksum_blake3     = 7;
+}
+
+message PutObjectResponse {
+  string version_id  = 1;  // UUID v7
+  string etag        = 2;  // Hex-encoded BLAKE3
+  string request_id  = 3;
+  string loc_token   = 4;  // X-MStore-Loc: zero-lookup token for fast GET (empty for inline objects)
+}
+
+// ── Put (streaming) ───────────────────────────────────────────────────────────
+// First chunk carries object metadata in the `meta` field.
+// Subsequent chunks carry only `data`.
+
+message PutChunk {
+  oneof payload {
+    PutChunkMeta meta = 1;  // First message only
+    bytes        data = 2;  // Subsequent messages
+  }
+}
+
+message PutChunkMeta {
+  string bucket              = 1;
+  string key                 = 2;
+  int64  total_size          = 3;  // Total object size in bytes (for pre-allocation)
+  string content_type        = 4;
+  string storage_class       = 5;
+  map<string, string> metadata = 6;
+  bytes  checksum_blake3     = 7;  // Full-object BLAKE3 (verified after last chunk)
+}
+
+// ── Get (small) ───────────────────────────────────────────────────────────────
+
+message GetObjectRequest {
+  string bucket     = 1;
+  string key        = 2;
+  string version_id = 3;  // Empty = latest
+  int64  range_start = 4; // 0 = from beginning
+  int64  range_end   = 5; // 0 = to end
+  string loc_token   = 6; // X-MStore-Loc: if set, skip metadata lookup for zero-latency GET
+}
+
+message GetObjectResponse {
+  bytes  data           = 1;
+  string version_id     = 2;
+  string etag           = 3;
+  string content_type   = 4;
+  int64  content_length = 5;
+  int64  last_modified  = 6;  // Unix timestamp seconds
+  map<string, string> metadata = 7;
+}
+
+// ── Get (streaming) ───────────────────────────────────────────────────────────
+// First chunk contains ObjectMeta, subsequent chunks contain raw data.
+
+message GetChunk {
+  oneof payload {
+    GetChunkMeta meta = 1;
+    bytes        data = 2;
+  }
+}
+
+message GetChunkMeta {
+  string version_id     = 1;
+  string etag           = 2;
+  string content_type   = 3;
+  int64  total_size     = 4;
+  int64  last_modified  = 5;
+  map<string, string> metadata = 6;
+}
+
+// ── Head ──────────────────────────────────────────────────────────────────────
+
+message HeadObjectRequest {
+  string bucket     = 1;
+  string key        = 2;
+  string version_id = 3;
+}
+
+message ObjectInfo {
+  string bucket        = 1;
+  string key           = 2;
+  string version_id    = 3;
+  string etag          = 4;
+  int64  size          = 5;
+  string content_type  = 6;
+  int64  last_modified = 7;
+  string storage_class = 8;
+  map<string, string> metadata = 9;
+  bool   is_delete_marker = 10;
+}
+
+// ── Delete ────────────────────────────────────────────────────────────────────
+
+message DeleteObjectRequest {
+  string bucket     = 1;
+  string key        = 2;
+  string version_id = 3;  // Empty = create delete marker
+}
+
+message DeleteObjectResponse {
+  bool   delete_marker    = 1;
+  string delete_marker_id = 2;
+  string request_id       = 3;
+}
+
+// ── List ──────────────────────────────────────────────────────────────────────
+
+message ListObjectsRequest {
+  string bucket     = 1;
+  string prefix     = 2;
+  string delimiter  = 3;
+  int32  max_keys   = 4;  // Default 1000, max 1000
+  string page_token = 5;
+}
+
+message ListObjectsResponse {
+  repeated ObjectInfo objects         = 1;
+  repeated string     common_prefixes = 2;
+  string              next_page_token = 3;
+  bool                is_truncated    = 4;
+  string              request_id      = 5;
+}
+
+// ── Multipart ─────────────────────────────────────────────────────────────────
+
+message CreateMultipartRequest {
+  string bucket              = 1;
+  string key                 = 2;
+  string content_type        = 3;
+  string storage_class       = 4;
+  map<string, string> metadata = 5;
+}
+
+message CreateMultipartResponse {
+  string upload_id = 1;
+}
+
+message UploadPartChunk {
+  oneof payload {
+    UploadPartMeta meta = 1;
+    bytes          data = 2;
+  }
+}
+
+message UploadPartMeta {
+  string bucket      = 1;
+  string key         = 2;
+  string upload_id   = 3;
+  int32  part_number = 4;
+  int64  part_size   = 5;
+}
+
+message UploadPartResponse {
+  string etag        = 1;
+  int32  part_number = 2;
+}
+
+message CompleteMultipartRequest {
+  string bucket    = 1;
+  string key       = 2;
+  string upload_id = 3;
+  repeated CompletedPart parts = 4;
+}
+
+message CompletedPart {
+  int32  part_number = 1;
+  string etag        = 2;
+}
+
+message AbortMultipartRequest {
+  string bucket    = 1;
+  string key       = 2;
+  string upload_id = 3;
+}
+
+// ── Bucket ────────────────────────────────────────────────────────────────────
+
+message CreateBucketRequest {
+  string bucket = 1;
+  string region = 2;  // Optional hint for geo-pinning
+}
+
+message DeleteBucketRequest {
+  string bucket      = 1;
+  bool   force_empty = 2;  // If true, delete even if not empty
+}
+
+message ListBucketsRequest {}
+
+message ListBucketsResponse {
+  repeated BucketInfo buckets = 1;
+}
+
+message HeadBucketRequest {
+  string bucket = 1;
+}
+
+message BucketInfo {
+  string bucket     = 1;
+  int64  created_at = 2;  // Unix timestamp seconds
+}
+
+// ── Batch Delete ─────────────────────────────────────────────────────────
+
+message DeleteObjectsRequest {
+  string bucket = 1;
+  repeated DeleteObjectId objects = 2;
+}
+
+message DeleteObjectId {
+  string key        = 1;
+  string version_id = 2;
+}
+
+message DeleteObjectsResponse {
+  repeated DeletedObject deleted = 1;
+  repeated DeleteError   errors  = 2;
+  string request_id = 3;
+}
+
+message DeletedObject {
+  string key              = 1;
+  string version_id       = 2;
+  bool   delete_marker    = 3;
+  string delete_marker_id = 4;
+}
+
+message DeleteError {
+  string key     = 1;
+  string code    = 2;
+  string message = 3;
+}
+
+// ── Batch Put (bidirectional streaming) ──────────────────────────────────
+// Client sends a stream of objects (one PutObjectsItem per object with inline data).
+// Server responds with one PutObjectResult per completed object.
+
+message PutObjectsChunk {
+  oneof payload {
+    PutObjectsItem item = 1;   // Start of a new object (carries inline data)
+    bytes          data = 2;   // Reserved for future large-object streaming
+  }
+}
+
+message PutObjectsItem {
+  string bucket              = 1;
+  string key                 = 2;
+  bytes  data                = 3;   // Inline data (entire object for V1)
+  string content_type        = 4;
+  string storage_class       = 5;
+  map<string, string> metadata = 6;
+  bytes  checksum_blake3     = 7;
+}
+
+message PutObjectResult {
+  string key        = 1;
+  string version_id = 2;
+  string etag       = 3;
+  string loc_token  = 4;
+  string error_code = 5;   // Non-empty on failure
+  string error_msg  = 6;
+}
+
+// ── Batch Get (server streaming) ─────────────────────────────────────────
+// Client sends a list of keys, server streams back objects sequentially.
+// Each object: one GetObjectResultMeta, then zero or more data chunks.
+
+message GetObjectsRequest {
+  string bucket = 1;
+  repeated GetObjectsKey keys = 2;
+}
+
+message GetObjectsKey {
+  string key        = 1;
+  string version_id = 2;
+  string loc_token  = 3;
+}
+
+message GetObjectResult {
+  oneof payload {
+    GetObjectResultMeta meta = 1;  // First message per object
+    bytes               data = 2;  // Subsequent data chunks
+  }
+}
+
+message GetObjectResultMeta {
+  string key            = 1;
+  string version_id     = 2;
+  string etag           = 3;
+  string content_type   = 4;
+  int64  content_length = 5;
+  int64  last_modified  = 6;
+  map<string, string> metadata = 7;
+  string error_code     = 8;   // Non-empty = skip this object
+  string error_msg      = 9;
+}
