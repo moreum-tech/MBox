@@ -104,7 +104,7 @@ In-process SDK (local signing)          API server (remote / other languages)
 
 - **.NET SDK**: in-process core library (`IDigitalSignatureSDK`) — produces signatures locally.
 - **Java SDK**: in-process **pure-Java** library (`sdk/java-native`, BouncyCastle/PDFBox) — same model as the .NET SDK, signs locally; module services (CadesSigner, XAdesSigner, PadesSigner, EYP, …). _The pure-Java SDK release is in preparation._
-- **Java gRPC client**: thin remote client for the API (`digimr-sdk-1.0.0-all.jar`) — signing happens on the server. Shipping again as of v2.3.1; the ready-made way to reach the API from Java until `sdk/java-native` lands.
+- **Java gRPC client**: thin remote client for the API (`digimr-sdk-1.0.0-all.jar`) — signing happens on the server. Shipping again as of v2.3.2; the ready-made way to reach the API from Java until `sdk/java-native` lands.
 - **REST API**: HTTP/JSON API (port 7701) — HTTP reflection of all SDK methods (requires the server).
 - **gRPC API**: Binary protocol (port 7702) — high performance, streaming (requires the server).
 

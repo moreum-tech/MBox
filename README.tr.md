@@ -31,9 +31,9 @@ Turk elektronik imza platformu — CAdES, PAdES, XAdES, JAdES, ASiC-E. EYP 1.3/2
 
 | Bilesen | Son Surum | Indir |
 |---------|-----------|-------|
-| [API Sunucu](digimr/api/README.tr.md) | v2.3.1 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-linux-amd64.tar.gz) |
-| [Docker](digimr/docker/README.tr.md) | v2.3.1 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-docker.tar.gz) |
-| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
+| [API Sunucu](digimr/api/README.tr.md) | v2.3.2 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-linux-amd64.tar.gz) |
+| [Docker](digimr/docker/README.tr.md) | v2.3.2 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-docker.tar.gz) |
+| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
 
 **Dokumantasyon:** [digimr/docs/](digimr/docs/README.tr.md) — kurulum rehberi, REST API referansi, .NET SDK referansi, imza formatlari. Okumak icin kurulum gerekmez.
 
