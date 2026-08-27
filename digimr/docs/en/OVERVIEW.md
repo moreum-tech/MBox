@@ -49,7 +49,7 @@ Details: [Examples — Beginner](../tr/ORNEKLER.md#baslangic) *(translation pend
 | **SDK reference** (.NET) | [SDK_REFERENCE.md](../tr/SDK_REFERANS.md) — 23 sections + 4 Appendices *(translation pending)* |
 | **REST API reference** | [API_REFERENCE.md](../tr/API_REFERANS.md) — 20 sections + 3 Appendices *(translation pending)* |
 
-> **Translation status:** Turkish documentation is complete and authoritative. English translations are in progress. For now, please use the Turkish documents in [docs/tr/](../tr/) — they are the primary source of truth. You can also refer to code examples and C# identifiers which are already in English.
+> **Translation status:** Turkish documentation is complete and authoritative. English translations are in progress. For now, please use the Turkish documents in [docs/tr/](../README.tr.md) — they are the primary source of truth. You can also refer to code examples and C# identifiers which are already in English.
 
 ---
 
