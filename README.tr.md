@@ -16,8 +16,8 @@ Rust ile yazilmis yuksek performansli, S3 uyumlu nesne depolama sunucusu.
 
 | Bilesen | Son Surum | Indir |
 |---------|-----------|-------|
-| [Sunucu + CLI](mstore/server/README.tr.md) | v0.3.1 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-linux-amd64.tar.gz) · [Windows amd64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-windows-amd64.zip) |
-| [Docker / Podman](mstore/docker/README.tr.md) | v0.3.1 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz) |
+| [Sunucu + CLI](mstore/server/README.tr.md) | v0.4.0 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-linux-amd64.tar.gz) · [Windows amd64](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-windows-amd64.zip) |
+| [Docker / Podman](mstore/docker/README.tr.md) | v0.4.0 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-docker.tar.gz) |
 
 **Dokumantasyon:** [mstore/docs/](mstore/docs/README.tr.md) — kurulum, yapilandirma, S3 ve gRPC API, SDK referansi. Okumak icin kurulum gerekmez.
 

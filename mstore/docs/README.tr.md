@@ -5,7 +5,7 @@
 MStore'un tam ürün dokümantasyonu — S3 uyumlu nesne depolama, gRPC API'si ve istemci SDK'ları.
 
 > **Bunları okumak için hiçbir şey kurmanıza gerek yok.** Aşağıdaki belgelerin
-> tamamı yayınlanan MStore v0.3.1 sürümünü anlatır; tek bir ikili dosya
+> tamamı yayınlanan MStore v0.4.0 sürümünü anlatır; tek bir ikili dosya
 > indirmeden API yüzeyini, yapılandırma seçeneklerini, dağıtım topolojilerini
 > ve SDK şeklini inceleyebilirsiniz.
 

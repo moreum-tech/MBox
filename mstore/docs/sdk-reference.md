@@ -1,6 +1,6 @@
 # MStore SDK Referansı / SDK Reference
 
-> Sürüm / Version: **v0.3.1**
+> Sürüm / Version: **v0.4.0**
 
 ## İçindekiler / Table of Contents
 

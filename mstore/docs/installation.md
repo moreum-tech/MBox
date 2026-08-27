@@ -1,6 +1,6 @@
 # MStore Kurulum Kılavuzu / Installation Guide
 
-> Sürüm / Version: **v0.3.1**
+> Sürüm / Version: **v0.4.0**
 
 ## İçindekiler / Table of Contents
 
@@ -40,7 +40,7 @@ toplamına eşit olmalıdır. Ayrıntı: [multidrive-setup.md](multidrive-setup.
 
 ```bash
 # 1. İndir ve aç
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-linux-amd64.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-linux-amd64.tar.gz
 tar xzf mstore-linux-amd64.tar.gz
 sudo install -m 0755 mstore-server mstore /usr/local/bin/
 
@@ -131,13 +131,13 @@ Windows servisi olarak çalıştırmak için [NSSM](https://nssm.cc) veya
 ## Docker / Podman Kurulumu
 
 ```bash
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-docker.tar.gz
 docker load < mstore-docker.tar.gz      # Podman: podman load < ...
 
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.1
+  mstore:v0.4.0
 ```
 
 Ayrıntılı Compose örnekleri (tek node, çoklu disk, 3-node cluster):
@@ -251,7 +251,7 @@ See [multidrive-setup.md](multidrive-setup.md).
 
 ```bash
 # 1. Download and extract
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-linux-amd64.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-linux-amd64.tar.gz
 tar xzf mstore-linux-amd64.tar.gz
 sudo install -m 0755 mstore-server mstore /usr/local/bin/
 
@@ -341,13 +341,13 @@ To run as a Windows service use [NSSM](https://nssm.cc) or `sc.exe create`.
 ## Docker / Podman Installation
 
 ```bash
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-docker.tar.gz
 docker load < mstore-docker.tar.gz      # Podman: podman load < ...
 
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.1
+  mstore:v0.4.0
 ```
 
 Detailed Compose examples (single node, multi-drive, 3-node cluster):

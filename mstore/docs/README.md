@@ -5,7 +5,7 @@
 Complete product documentation for MStore — S3-compatible object storage, gRPC API and client SDKs.
 
 > **You do not need to install anything to read these.** Every document below
-> describes MStore v0.3.1 as shipped, so you can evaluate what it does — API
+> describes MStore v0.4.0 as shipped, so you can evaluate what it does — API
 > surface, configuration knobs, deployment topologies, SDK shape — before
 > downloading a single binary.
 
