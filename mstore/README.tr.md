@@ -10,7 +10,7 @@ Rust ile yazilmis yuksek performansli, S3 uyumlu nesne depolama sunucusu.
 
 ## Dokumantasyon
 
-Tum urun dokumantasyonu [docs/](docs/) klasorundedir — **okumak icin hicbir sey kurmaniza gerek yok**.
+Tum urun dokumantasyonu [docs/](docs/README.tr.md) klasorundedir — **okumak icin hicbir sey kurmaniza gerek yok**.
 
 | Belge | Kapsam |
 |-------|--------|
@@ -40,8 +40,8 @@ wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-
 
 | Bilesen | Aciklama | Detay |
 |---------|----------|-------|
-| [Sunucu](server/) | S3 HTTP + gRPC endpoint | Kurulum, yapilandirma |
-| [Docker](docker/) | Container imaji ve compose | Hizli baslangic |
+| [Sunucu](server/README.tr.md) | S3 HTTP + gRPC endpoint | Kurulum, yapilandirma |
+| [Docker](docker/README.tr.md) | Container imaji ve compose | Hizli baslangic |
 
 ## Ozellikler
 

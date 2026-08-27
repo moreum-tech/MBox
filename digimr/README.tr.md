@@ -12,7 +12,7 @@ Turk elektronik imza platformu. CAdES, PAdES, XAdES, JAdES, ASiC-E imzalama ve d
 
 ## Dokumantasyon
 
-Tum urun dokumantasyonu [docs/](docs/) klasorundedir — **okumak icin hicbir sey kurmaniza gerek yok**. Icerik `digimr-docs.tar.gz` ile birlikte gelen metnin aynisidir.
+Tum urun dokumantasyonu [docs/](docs/README.tr.md) klasorundedir — **okumak icin hicbir sey kurmaniza gerek yok**. Icerik `digimr-docs.tar.gz` ile birlikte gelen metnin aynisidir.
 
 | Belge | Kapsam |
 |-------|--------|
@@ -52,9 +52,9 @@ wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-
 
 | Bilesen | Aciklama | Detay |
 |---------|----------|-------|
-| [API Sunucu](api/) | Port 7701 uzerinde REST API | Kurulum, yapilandirma, endpoint'ler |
-| [Token Agent](agent/) | Yerel PKCS#11 koprusu (port 5555) | Donanim token erisimi |
-| [Docker](docker/) | Container imaji ve compose | Hizli baslangic |
+| [API Sunucu](api/README.tr.md) | Port 7701 uzerinde REST API | Kurulum, yapilandirma, endpoint'ler |
+| [Token Agent](agent/README.tr.md) | Yerel PKCS#11 koprusu (port 5555) | Donanim token erisimi |
+| [Docker](docker/README.tr.md) | Container imaji ve compose | Hizli baslangic |
 
 ## Ozellikler
 
