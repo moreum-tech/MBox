@@ -52,7 +52,7 @@ MA3 API'den geçiş yapan kullanıcılar için SDK, doğrudan `TsaProviderConfig
 // TSSettings settings = new TSSettings("http://tzd.kamusm.gov.tr", userId, password, DigestAlg.SHA256);
 // DigiMR SDK karşılığı:
 sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM(
-    "http://tzd.kamusm.gov.tr", 7521, Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
+    "http://tzd.kamusm.gov.tr", 12345, Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 ```
 
 > **Not:** `TsaProviderConfig.KamuSM()` metodu `AuthType`, `PolicyOid` ve kimlik doğrulama başlıklarını otomatik olarak ayarlar. Ayrıca parametreleri `appsettings.json`'a yazmadan doğrudan kod içinde yapılandırmanıza olanak tanır.
@@ -65,7 +65,7 @@ SDK üzerinden birden fazla TSA sağlayıcıyı programatik olarak tanımlayabil
 sdk.ConfigureTsa(new TsaProvidersOptions {
     Default = "kamusm",
     Providers = {
-        ["kamusm"] = TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521, Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!),
+        ["kamusm"] = TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345, Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!),
         ["digicert"] = TsaProviderConfig.Anonymous("http://timestamp.digicert.com"),
         ["turktrust"] = TsaProviderConfig.BasicAuth("http://zd.turktrust.com.tr", "user", "pass")
     }
@@ -125,7 +125,7 @@ curl -X POST https://localhost:7701/api/v1/sign \
         "Name": "TÜBİTAK Kamu SM",
         "Url": "http://tzd.kamusm.gov.tr",
         "AuthType": "kamusm-identity",
-        "UserId": 7521,
+        "UserId": 12345,
         "Password": "",
         "PolicyOid": "2.16.792.1.2.1.1.5.7.3.1",
         "TimeoutSeconds": 30,
@@ -143,7 +143,7 @@ curl -X POST https://localhost:7701/api/v1/sign \
 
 ```csharp
 // SDK üzerinden
-var tsClient = new TSClient(new TSSettings("http://tzd.kamusm.gov.tr", 7521, Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
+var tsClient = new TSClient(new TSSettings("http://tzd.kamusm.gov.tr", 12345, Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 int kalan = tsClient.requestRemainingCredit();
 Console.WriteLine($"Kalan kredi: {kalan}");
 ```
@@ -167,7 +167,7 @@ DigiMR birden fazla TSA sağlayıcı destekler. `TsaProviderKey` ile istediğini
         "Name": "TÜBİTAK Kamu SM",
         "Url": "http://zd.kamusm.gov.tr",
         "AuthType": "kamusm-identity",
-        "UserId": 7521,
+        "UserId": 12345,
         "Password": "",
         "PolicyOid": "2.16.792.1.2.1.1.5.7.3.1",
         "Enabled": true

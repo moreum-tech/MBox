@@ -167,10 +167,10 @@ new ASiCDocument { FileName = "...", Content = File.ReadAllBytes("..."), MimeTyp
 
 ```csharp
 // v1.x belgelenen ama yanlis kullanilan:
-TsaProviderConfig.KamuSM(url, port: 7521, password)
+TsaProviderConfig.KamuSM(url, port: 12345, password)
 
 // v2.0 dogru kullanim:
-TsaProviderConfig.KamuSM(url, userId: 7521, password)
+TsaProviderConfig.KamuSM(url, userId: 12345, password)
 ```
 
 `Http()` ve `RfcTsp()` factory'leri yerine:

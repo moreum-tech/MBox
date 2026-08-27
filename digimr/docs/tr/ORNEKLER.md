@@ -100,7 +100,7 @@ var sdk = new DigitalSignatureSDK();
 sdk.SetLicenseFile("digimr-sdk.lic");
 sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM(
     url: "http://tzd.kamusm.gov.tr",
-    userId: 7521,
+    userId: 12345,
     password: kamusmPassword));
 
 // PIN durum kontrolu — kilitli mi, son deneme mi
@@ -185,7 +185,7 @@ Mevcut B-B imzasina TSA zaman damgasi ekleyerek B-T yap.
 ```csharp
 var sdk = new DigitalSignatureSDK();
 var kamusmPassword = Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!;
-sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521, kamusmPassword));
+sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345, kamusmPassword));
 
 var signedData = File.ReadAllBytes("b-seviye.pdf");
 var upgrade = await sdk.UpgradeSignatureAsync(
@@ -270,7 +270,7 @@ ASiC-E: Coklu belgeyi tek konteynerde gruplandir + imzala.
 var kamusmPassword = Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!;
 var sdk = new DigitalSignatureSDK();
 sdk.SetLicenseFile("digimr-sdk.lic");
-sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521, kamusmPassword));
+sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345, kamusmPassword));
 
 using var provider = await sdk.CreateAndAuthenticateProviderAsync(
     SigningProviderType.Software,
@@ -317,7 +317,7 @@ TS 13298 V2.0 EYP paketi — elektronik yazisma standardi.
 ```csharp
 var sdk = new DigitalSignatureSDK();
 sdk.SetLicenseFile("digimr-sdk.lic");
-sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521,
+sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345,
     Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 
 using var signerProvider = await sdk.CreateAndAuthenticateProviderAsync(
@@ -423,7 +423,7 @@ sdk.ConfigureTsa(new TsaProvidersOptions
     Providers = new Dictionary<string, TsaProviderConfig>
     {
         ["kamusm"] = TsaProviderConfig.KamuSM(
-            "http://tzd.kamusm.gov.tr", 7521,
+            "http://tzd.kamusm.gov.tr", 12345,
             Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!),
         ["freetsa"] = TsaProviderConfig.Anonymous("https://freetsa.org/tsr"),
         ["turktrust"] = TsaProviderConfig.BasicAuth(
@@ -553,7 +553,7 @@ public class SigningController : ControllerBase
 //     var sdk = new DigitalSignatureSDK();
 //     sdk.SetLicenseFile("digimr-sdk.lic");
 //     sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM(
-//         "http://tzd.kamusm.gov.tr", 7521,
+//         "http://tzd.kamusm.gov.tr", 12345,
 //         Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 //     return sdk;
 // });
@@ -706,7 +706,7 @@ EYP paketi olustururken imzalayici kullanicinin + kurumsal muhur sertifikasi (e-
 ```csharp
 var sdk = new DigitalSignatureSDK();
 sdk.SetLicenseFile("digimr-sdk.lic");
-sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521,
+sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345,
     Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 
 // 1. Imzalayici provider (Token / PKCS#12)
@@ -802,7 +802,7 @@ B-LTA seviyeli imzalarin arsiv zaman damgasi sureli — yenileme gerekir.
 ```csharp
 var sdk = new DigitalSignatureSDK();
 sdk.SetLicenseFile("digimr-sdk.lic");
-sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521,
+sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345,
     Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 
 // Arsiv dosyalarini tara

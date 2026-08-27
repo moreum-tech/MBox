@@ -61,7 +61,7 @@ sdk.SetLicenseFile("digimr-sdk.lic");
 // Sifreyi ASLA kod icinde yazmayin. Env var veya secrets store kullanin.
 sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM(
     url: "http://tzd.kamusm.gov.tr",
-    userId: 7521,
+    userId: 12345,
     password: Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")!));
 
 // 3. Token ile provider olustur
@@ -133,7 +133,7 @@ var kamusmPassword = Environment.GetEnvironmentVariable("KAMUSM_PASSWORD")
 
 sdk.ConfigureTsa("kamusm", TsaProviderConfig.KamuSM(
     url: "http://tzd.kamusm.gov.tr",
-    userId: 7521,
+    userId: 12345,
     password: kamusmPassword));
 ```
 
@@ -156,7 +156,7 @@ sdk.ConfigureTsa(new TsaProvidersOptions
     Default = "kamusm",
     Providers = new Dictionary<string, TsaProviderConfig>
     {
-        ["kamusm"] = TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 7521, kamusmPassword),
+        ["kamusm"] = TsaProviderConfig.KamuSM("http://tzd.kamusm.gov.tr", 12345, kamusmPassword),
         ["freetsa"] = TsaProviderConfig.Anonymous("https://freetsa.org/tsr"),
         ["turktrust"] = TsaProviderConfig.BasicAuth("https://tsp.turktrust.com.tr", "user", turktrustPassword)
     }

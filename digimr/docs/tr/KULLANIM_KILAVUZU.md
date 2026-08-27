@@ -133,12 +133,6 @@ Agent varsayilan olarak `http://localhost:5555` adresinde calisir. API'si .NET A
     }
   },
 
-  "DefaultTsaUrl": "http://tzd.kamusm.gov.tr",
-  "TimestampServer": {
-    "UserId":   7521,
-    "Password": "<KAMUSM_TSA_PASSWORD env degiskeninden okunur>"
-  },
-
   "TsaProviders": {
     "Default": "kamusm",
     "Providers": {
@@ -146,9 +140,9 @@ Agent varsayilan olarak `http://localhost:5555` adresinde calisir. API'si .NET A
         "Name": "TUBITAK Kamu SM",
         "Url": "http://tzd.kamusm.gov.tr",
         "AuthType": "kamusm-identity",
-        "UserId": 7521,
-        "Password": "<KAMUSM_TSA_PASSWORD env degiskeninden okunur>",
-        "Enabled": true
+        "UserId": 0,
+        "Password": "",
+        "Enabled": false
       },
       "digicert": {
         "Name": "DigiCert",
@@ -175,8 +169,9 @@ Agent varsayilan olarak `http://localhost:5555` adresinde calisir. API'si .NET A
 ```
 
 **Ortam Degiskenleri:**
-- `TSA_MODE`: `free` (DigiCert), `kamusm` (Kamu SM), `local` (test stub)
-- `KAMUSM_TSA_PASSWORD`: Kamu SM TSA sifresi (appsettings.json'a yazilmaz, env'den okunur)
+- `TsaProviders__Default`: aktif TSA saglayicisi (`digicert`, `kamusm`, ...)
+- `TsaProviders__Providers__kamusm__Enabled`: `true`/`false` — Kamu SM'i etkinlestirir
+- `TsaProviders__Providers__kamusm__UserId`, `TsaProviders__Providers__kamusm__Password`: Kamu SM kimlik bilgileri (appsettings.json'a yazilmaz, env'den okunur)
 
 ---
 
@@ -937,8 +932,8 @@ DigiMR yalnizca RFC 3161 protokolunu destekler (HTTP degil). Zaman damgasi B-T v
       "kamusm": {
         "Url": "http://tzd.kamusm.gov.tr",
         "AuthType": "kamusm-identity",
-        "UserId": 7521,
-        "Password": "<KAMUSM_TSA_PASSWORD env degiskeninden okunur>"
+        "UserId": 0,
+        "Password": "<TsaProviders__Providers__kamusm__Password env degiskeninden okunur>"
       }
     }
   }
