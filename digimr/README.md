@@ -10,6 +10,20 @@ Turkish electronic signature platform. Self-contained REST API for CAdES, PAdES,
 
 ---
 
+## Documentation
+
+Full product documentation lives in [docs/](docs/) — **nothing needs to be installed to read it**. It is the same text that ships inside `digimr-docs.tar.gz`.
+
+| Document | What it covers |
+|----------|----------------|
+| [Overview](docs/en/OVERVIEW.md) | What DigiMR is and what it can sign |
+| [Deployment guide](docs/tr/KURULUM_REHBERI.md) | Binaries, systemd, Docker, TLS, sizing *(TR)* |
+| [REST API reference](docs/tr/API_REFERANS.md) | Every endpoint, schema and error code *(TR)* |
+| [.NET SDK reference](docs/tr/SDK_REFERANS.md) | Full type and method reference *(TR)* |
+| [Examples](docs/tr/ORNEKLER.md) | 17 worked scenarios (C# + curl) *(TR)* |
+| [Signature formats](docs/tr/IMZA_FORMATLARI.md) | CAdES / XAdES / PAdES / ASiC, levels B-B … B-LTA *(TR)* |
+| [All documents →](docs/README.md) | Agent setup, providers, KEP, TSA, mobile signature, legislation |
+
 ## Downloads
 
 | File | Description |
