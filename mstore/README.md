@@ -10,7 +10,7 @@ High-performance, S3-compatible object storage written in Rust.
 
 ## Documentation
 
-Full product documentation lives in [docs/](docs/) — **nothing needs to be installed to read it**.
+Full product documentation lives in [docs/](docs/README.md) — **nothing needs to be installed to read it**.
 
 | Document | What it covers |
 |----------|----------------|
@@ -40,8 +40,8 @@ wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-
 
 | Component | Description | Details |
 |-----------|-------------|---------|
-| [Server](server/) | S3 HTTP + gRPC endpoints | Installation, configuration |
-| [Docker](docker/) | Container image and compose | Quick start |
+| [Server](server/README.md) | S3 HTTP + gRPC endpoints | Installation, configuration |
+| [Docker](docker/README.md) | Container image and compose | Quick start |
 
 ## Features
 

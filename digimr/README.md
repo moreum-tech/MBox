@@ -12,7 +12,7 @@ Turkish electronic signature platform. Self-contained REST API for CAdES, PAdES,
 
 ## Documentation
 
-Full product documentation lives in [docs/](docs/) — **nothing needs to be installed to read it**. It is the same text that ships inside `digimr-docs.tar.gz`.
+Full product documentation lives in [docs/](docs/README.md) — **nothing needs to be installed to read it**. It is the same text that ships inside `digimr-docs.tar.gz`.
 
 | Document | What it covers |
 |----------|----------------|
@@ -52,9 +52,9 @@ wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-
 
 | Component | Description | Details |
 |-----------|-------------|---------|
-| [API Server](api/) | REST API on port 7701 | Installation, configuration, endpoints |
-| [Token Agent](agent/) | Local PKCS#11 bridge (port 5555) | Hardware token access |
-| [Docker](docker/) | Container image and compose | Quick start |
+| [API Server](api/README.md) | REST API on port 7701 | Installation, configuration, endpoints |
+| [Token Agent](agent/README.md) | Local PKCS#11 bridge (port 5555) | Hardware token access |
+| [Docker](docker/README.md) | Container image and compose | Quick start |
 
 ## Features
 
