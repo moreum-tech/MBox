@@ -2,15 +2,15 @@
 
 > **Turkish version is authoritative:** [../CHANGELOG.md](../tr/CHANGELOG.md)
 
-## v2.3.1 — 2026-08-27
+## v2.3.2 — 2026-08-27
 
 > This section covers the release-asset change only; code changes between v2.2.0 and
-> v2.3.1 are not yet written up here.
+> v2.3.2 are not yet written up here.
 
 ### The gRPC Java client SDK is back
 
 - **`digimr-sdk-1.0.0-all.jar` ships again.** The gRPC Java client SDK removed in v2.0.1
-  was rebuilt against the v2.3.1 protos and restored to the release. The jar contains only
+  was rebuilt against the v2.3.2 protos and restored to the release. The jar contains only
   gRPC stubs plus the bundled grpc/netty runtime; the signing engine is **not** inside it —
   requests go to the API server (gRPC port 7702).
 - **`digimr-java-examples.tar.gz`** — 10 runnable example programs (sign, verify, KEP,
@@ -48,7 +48,7 @@ separate release.
 
 - **Obfuscation**: the .NET signing engines + SDK are now shipped obfuscated (reverse-engineering resistant); the unprotected v2.0.0 was removed. Docker / Linux / Windows binaries are all obfuscated.
 - **Old gRPC Java client SDK removed** (`digimr-sdk-*-all.jar`). It is being replaced by a **pure-Java in-process signing SDK** (`sdk/java-native`, BouncyCastle/PDFBox) that mirrors the .NET SDK; it will ship in a separate release. The gRPC/REST API (ports 7701/7702) is unchanged — any language, Java included, can still call the API.
-  **Update: this SDK was restored in v2.3.1 — see the v2.3.1 section above.**
+  **Update: this SDK was restored in v2.3.2 — see the v2.3.2 section above.**
 
 ## v2.0.0 — 2026-04-17
 
