@@ -1,6 +1,6 @@
 # MStore gRPC API Referansı / gRPC API Reference
 
-> Sürüm / Version: **v0.3.1** · Varsayılan uç nokta / Default endpoint: `http://<host>:9011`
+> Sürüm / Version: **v0.4.0** · Varsayılan uç nokta / Default endpoint: `http://<host>:9011`
 > Proto paketi / package: `mstore.v1` · Servis / service: `ObjectStorage`
 
 ## İçindekiler / Table of Contents

@@ -18,7 +18,7 @@
 Imaj bir OCI arsivi olarak dagitilir; once yukleyin:
 
 ```bash
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-docker.tar.gz
 docker load < mstore-docker.tar.gz      # Podman: podman load < mstore-docker.tar.gz
 ```
 
@@ -28,7 +28,7 @@ Ardindan tek komutla baslatin:
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.1
+  mstore:v0.4.0
 ```
 
 Bu komut:
@@ -51,7 +51,7 @@ curl http://localhost:9010/minio/health/live
 ```yaml
 services:
   mstore:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     container_name: mstore
     restart: unless-stopped
     ports:
@@ -96,7 +96,7 @@ Erasure coding ile veri korumasi icin birden fazla disk baglayabilirsiniz. Asagi
 ```yaml
 services:
   mstore:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     container_name: mstore
     restart: unless-stopped
     ports:
@@ -169,7 +169,7 @@ Yuksek erisilebilirlik icin 3 node'lu bir cluster kurabilirsiniz. Nginx load bal
 ```yaml
 services:
   node0:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     hostname: node0
     restart: unless-stopped
     ports:
@@ -183,7 +183,7 @@ services:
     command: ["--config", "/etc/mstore/config.toml"]
 
   node1:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     hostname: node1
     restart: unless-stopped
     ports:
@@ -197,7 +197,7 @@ services:
     command: ["--config", "/etc/mstore/config.toml"]
 
   node2:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     hostname: node2
     restart: unless-stopped
     ports:
@@ -345,7 +345,7 @@ docker run -d \
   -e MSTORE_MASTER_KEY="$(openssl rand -base64 32)" \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.1
+  mstore:v0.4.0
 ```
 
 Docker Compose ile:
@@ -432,7 +432,7 @@ docker exec mstore mstore ls mstore://
 The image ships as an OCI archive; load it first:
 
 ```bash
-wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.3.1/mstore-docker.tar.gz
+wget https://github.com/moreum-tech/MBox/releases/download/mstore-v0.4.0/mstore-docker.tar.gz
 docker load < mstore-docker.tar.gz      # Podman: podman load < mstore-docker.tar.gz
 ```
 
@@ -442,7 +442,7 @@ Then start it with a single command:
 docker run -d --name mstore \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.1
+  mstore:v0.4.0
 ```
 
 This command:
@@ -465,7 +465,7 @@ Create a `docker-compose.yml` file:
 ```yaml
 services:
   mstore:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     container_name: mstore
     restart: unless-stopped
     ports:
@@ -510,7 +510,7 @@ Mount multiple volumes for data protection with erasure coding. The example belo
 ```yaml
 services:
   mstore:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     container_name: mstore
     restart: unless-stopped
     ports:
@@ -583,7 +583,7 @@ For high availability, deploy a 3-node cluster with an Nginx load balancer.
 ```yaml
 services:
   node0:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     hostname: node0
     restart: unless-stopped
     ports:
@@ -597,7 +597,7 @@ services:
     command: ["--config", "/etc/mstore/config.toml"]
 
   node1:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     hostname: node1
     restart: unless-stopped
     ports:
@@ -611,7 +611,7 @@ services:
     command: ["--config", "/etc/mstore/config.toml"]
 
   node2:
-    image: mstore:v0.3.1
+    image: mstore:v0.4.0
     hostname: node2
     restart: unless-stopped
     ports:
@@ -759,7 +759,7 @@ docker run -d \
   -e MSTORE_MASTER_KEY="$(openssl rand -base64 32)" \
   -p 9010:9010 -p 9011:9011 \
   -v mstore-data:/data \
-  mstore:v0.3.1
+  mstore:v0.4.0
 ```
 
 With Docker Compose:
