@@ -3037,7 +3037,7 @@ var response = await client.SignDocumentAsync(new SignDocumentRequest
 ```
 
 **Java'dan ham gRPC istemci ornegi.** Hazir stub'lar icin `digimr-sdk-1.0.0-all.jar`'i
-(v2.3.1 release varligi) classpath'e eklemek yeterlidir; asagidaki tipler o jar'dan gelir.
+(v2.3.2 release varligi) classpath'e eklemek yeterlidir; asagidaki tipler o jar'dan gelir.
 In-process yerel imza icin saf-Java SDK (`sdk/java-native`, release hazirlaniyor)
 kullanilacaktir.
 

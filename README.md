@@ -31,9 +31,9 @@ Turkish electronic signature platform — CAdES, PAdES, XAdES, JAdES, ASiC-E. EY
 
 | Component | Latest | Download |
 |-----------|--------|----------|
-| [API Server](digimr/api/README.md) | v2.3.1 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-linux-amd64.tar.gz) |
-| [Docker](digimr/docker/README.md) | v2.3.1 | [Image](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-docker.tar.gz) |
-| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.1/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
+| [API Server](digimr/api/README.md) | v2.3.2 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-linux-amd64.tar.gz) |
+| [Docker](digimr/docker/README.md) | v2.3.2 | [Image](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-docker.tar.gz) |
+| [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
 
 **Documentation:** [digimr/docs/](digimr/docs/README.md) — deployment guide, REST API reference, .NET SDK reference, signature formats. No install needed to read.
 

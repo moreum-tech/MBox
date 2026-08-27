@@ -139,7 +139,7 @@ In-process SDK (yerel imza)            API sunucusu (uzak / diğer diller)
 
 - **.NET SDK**: in-process ana kütüphane (`IDigitalSignatureSDK`) — imzayı yerelde üretir.
 - **Java SDK**: in-process **saf Java** kütüphanesi (`sdk/java-native`, BouncyCastle/PDFBox) — .NET SDK ile aynı modelde imzayı yerelde üretir; modül servisleri (CadesSigner, XAdesSigner, PadesSigner, EYP, …). _Saf-Java SDK release'i hazırlanıyor._
-- **Java gRPC istemcisi**: API'yi uzaktan çağıran ince istemci (`digimr-sdk-1.0.0-all.jar`) — imza sunucuda üretilir. v2.3.1 ile yeniden yayında; `sdk/java-native` çıkana kadar Java'dan API'ye bağlanmanın hazır yolu.
+- **Java gRPC istemcisi**: API'yi uzaktan çağıran ince istemci (`digimr-sdk-1.0.0-all.jar`) — imza sunucuda üretilir. v2.3.2 ile yeniden yayında; `sdk/java-native` çıkana kadar Java'dan API'ye bağlanmanın hazır yolu.
 - **REST API**: HTTP/JSON API (port 7701) — tüm SDK metotlarının HTTP yansıması (sunucu gerektirir).
 - **gRPC API**: Binary protokol (port 7702) — yüksek performans, streaming (sunucu gerektirir).
 

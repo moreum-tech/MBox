@@ -6,15 +6,15 @@ Bu dokuman DigiMR surumleri arasindaki degisiklikleri, yeni ozellikleri ve migra
 
 ---
 
-## v2.3.1 — 2026-08-27
+## v2.3.2 — 2026-08-27
 
-> Bu bolum yalniz release varliklarindaki degisikligi kapsar; v2.2.0-v2.3.1 arasindaki
+> Bu bolum yalniz release varliklarindaki degisikligi kapsar; v2.2.0-v2.3.2 arasindaki
 > kod degisiklikleri bu dokumana henuz islenmedi.
 
 ### Java gRPC istemci SDK'si geri geldi
 
 - **`digimr-sdk-1.0.0-all.jar` yeniden yayinda.** v2.0.1'de kaldirilan gRPC Java istemci
-  SDK'si, v2.3.1 proto'lariyla yeniden derlenerek release'e geri kondu. Jar yalniz gRPC
+  SDK'si, v2.3.2 proto'lariyla yeniden derlenerek release'e geri kondu. Jar yalniz gRPC
   stub'larini ve gomulu grpc/netty calisma zamanini icerir; imza motoru jar'in **icinde
   degildir** — istekler API sunucusuna (gRPC port 7702) gider.
 - **`digimr-java-examples.tar.gz`** — 10 calisir ornek program (imzalama, dogrulama, KEP,
@@ -55,7 +55,7 @@ yayinlanacak.
 
 - **Obfuscation**: .NET imza motorlari + SDK artik obfuscated (ters muhendislik direncli) olarak yayinlaniyor; korumasiz v2.0.0 kaldirildi. Docker / Linux / Windows ikililerinin tamami obfuscated.
 - **Eski gRPC Java istemci SDK'si kaldirildi** (`digimr-sdk-*-all.jar`). Yerine, .NET SDK ile ayni modelde calisan **saf-Java in-process imza SDK'si** (`sdk/java-native`, BouncyCastle/PDFBox) hazirlaniyor; ayri bir surumde yayinlanacak. gRPC/REST API (port 7701/7702) degismedi — Java dahil tum diller API'yi cagirmaya devam edebilir.
-  **Guncelleme: bu SDK v2.3.1'de geri getirildi — yukaridaki v2.3.1 bolumune bakin.**
+  **Guncelleme: bu SDK v2.3.2'de geri getirildi — yukaridaki v2.3.2 bolumune bakin.**
 
 ---
 
