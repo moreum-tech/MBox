@@ -33,6 +33,7 @@ Turkish electronic signature platform — CAdES, PAdES, XAdES, JAdES, ASiC-E. EY
 |-----------|--------|----------|
 | [API Server](digimr/api/README.md) | v2.3.2 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-linux-amd64.tar.gz) |
 | [Docker](digimr/docker/README.md) | v2.3.2 | [Image](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-docker.tar.gz) |
+| [Tablet Signing](digimr/tablet/README.md) | v1.1.0 | [Test package (Windows)](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.zip) · [Windows](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-windows-amd64.zip) · [Linux](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-linux-amd64.tar.gz) |
 | [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
 
 **Documentation:** [digimr/docs/](digimr/docs/README.md) — deployment guide, REST API reference, .NET SDK reference, signature formats. No install needed to read.

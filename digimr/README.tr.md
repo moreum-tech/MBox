@@ -55,6 +55,7 @@ wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-
 | [API Sunucu](api/README.tr.md) | Port 7701 uzerinde REST API | Kurulum, yapilandirma, endpoint'ler |
 | [Token Agent](agent/README.tr.md) | Yerel PKCS#11 koprusu (port 5555) | Donanim token erisimi |
 | [Docker](docker/README.tr.md) | Container imaji ve compose | Hizli baslangic |
+| [Tablet Imza](tablet/README.tr.md) | Tablet/kiosk imza uygulamasi (port 7777) + test paketi | El imzasi, eToken, mobil imza |
 
 ## Ozellikler
 

@@ -55,6 +55,7 @@ wget https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-
 | [API Server](api/README.md) | REST API on port 7701 | Installation, configuration, endpoints |
 | [Token Agent](agent/README.md) | Local PKCS#11 bridge (port 5555) | Hardware token access |
 | [Docker](docker/README.md) | Container image and compose | Quick start |
+| [Tablet Signing](tablet/README.md) | Tablet/kiosk signing app (port 7777) + test package | Handwritten, eToken, mobile signature |
 
 ## Features
 
