@@ -33,7 +33,7 @@ Turk elektronik imza platformu — CAdES, PAdES, XAdES, JAdES, ASiC-E. EYP 1.3/2
 |---------|-----------|-------|
 | [API Sunucu](digimr/api/README.tr.md) | v2.3.2 | [Linux amd64](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-linux-amd64.tar.gz) |
 | [Docker](digimr/docker/README.tr.md) | v2.3.2 | [Imaj](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-docker.tar.gz) |
-| [Tablet Imza](digimr/tablet/README.tr.md) | v1.1.0 | [Test paketi (Windows)](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.zip) · [Windows](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-windows-amd64.zip) · [Linux](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-linux-amd64.tar.gz) |
+| [Tablet Imza](digimr/tablet/README.tr.md) | v1.1.0 | [Test paketi (Windows)](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.msi) · [Windows](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-windows-amd64.zip) · [Linux](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-linux-amd64.tar.gz) |
 | [Java SDK](https://github.com/moreum-tech/MBox/releases/download/digimr-v2.3.2/digimr-sdk-1.0.0-all.jar) | 1.0.0 | JAR |
 
 **Dokumantasyon:** [digimr/docs/](digimr/docs/README.tr.md) — kurulum rehberi, REST API referansi, .NET SDK referansi, imza formatlari. Okumak icin kurulum gerekmez.

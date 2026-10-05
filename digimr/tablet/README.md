@@ -12,12 +12,17 @@ operator signs on the tablet, and the signed PDFs are posted back to your `callb
 
 ## Try it now — Test Package (Windows)
 
-A single zip installs the tablet signing app together with a test web app. Install it on a Windows
+A single installer sets up the tablet signing app together with a test web app. Install it on a Windows
 tablet or on any Windows computer and test end to end (signing also works with a mouse).
 
-1. Download [digimr-tablet-test-paketi-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.zip) and extract it to a folder.
-2. Run `Kurulum.bat` and accept the administrator prompt. At the end both apps start and the
-   addresses to open are shown.
+1. Download and run [digimr-tablet-test-paketi-windows-amd64.msi](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.msi).
+2. Choose the installation scope:
+   - **Just for me** — no administrator rights needed; installs to
+     `%LOCALAPPDATA%\Programs\DigiMR\Tablet`.
+   - **Everyone on this computer** — requires administrator rights; installs to
+     `C:\Program Files\DigiMR\Tablet` and adds a Windows Firewall rule for port 5080.
+
+   When setup finishes both apps start; the desktop shortcut **DigiMR Tablet** starts them later.
 3. Open the test page in a browser:
    - on the same computer: `http://localhost:5080`
    - from another PC on the network: `http://<tablet-ip>:5080`
@@ -27,14 +32,15 @@ tablet or on any Windows computer and test end to end (signing also works with a
 For handwritten signatures an optional identity check can be selected: **MRZ** (back of the ID
 card shown to the camera) or **NFC** (card chip read).
 
-Details (uninstall, admin password reset, troubleshooting) are in the `README.md` inside the zip
-(Turkish).
+Details (uninstall, admin password reset, silent install) are in `BENIOKU.txt` in the install
+folder (Turkish; also under Start menu > DigiMR Tablet > Benioku). The installer and the DigiMR
+binaries are code-signed by Moreum Bilişim Teknolojileri A.Ş.
 
 ## Downloads
 
 | File | Description |
 |------|-------------|
-| [digimr-tablet-test-paketi-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.zip) | Test package: tablet app + test web app + installer (Windows 10/11 x64) |
+| [digimr-tablet-test-paketi-windows-amd64.msi](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.msi) | Test package installer: tablet app + test web app (Windows 10/11 x64) |
 | [digimr-tablet-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-windows-amd64.zip) | Tablet app — Windows 10/11 x64 (requires Microsoft Edge WebView2 Runtime) |
 | [digimr-tablet-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-linux-amd64.tar.gz) | Tablet app — Linux x64 (requires .NET 10 + ASP.NET Core 10 runtime and WebKitGTK) |
 | [digimr-tablet-ornek-gonderici-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-ornek-gonderici-windows-amd64.zip) | Sample sender web app — Windows x64 |

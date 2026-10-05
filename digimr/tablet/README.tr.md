@@ -12,13 +12,19 @@ bir HTTP API (port 7777) sunar; sisteminiz iş gönderir, operatör tablette imz
 
 ## Hemen deneyin — Test Paketi (Windows)
 
-Tek bir zip ile tablet imza uygulamasını ve bir test web uygulamasını birlikte kurar. Bir Windows
+Tek bir kurulum dosyası tablet imza uygulamasını ve bir test web uygulamasını birlikte kurar. Bir Windows
 tablete ya da herhangi bir Windows bilgisayara kurup uçtan uca deneyebilirsiniz (imza fare ile de
 atılabilir).
 
-1. [digimr-tablet-test-paketi-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.zip) dosyasını indirip bir klasöre açın.
-2. `Kurulum.bat` dosyasını çalıştırın, yönetici iznini onaylayın. Kurulum sonunda iki uygulama da
-   başlar ve açılacak adresler gösterilir.
+1. [digimr-tablet-test-paketi-windows-amd64.msi](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.msi) dosyasını indirip çalıştırın.
+2. Kurulum kapsamını seçin:
+   - **Yalnızca benim için** — yönetici izni gerekmez; kurulum yeri
+     `%LOCALAPPDATA%\Programs\DigiMR\Tablet`.
+   - **Bu bilgisayarı kullanan herkes için** — yönetici izni gerekir; kurulum yeri
+     `C:\Program Files\DigiMR\Tablet`, 5080 portu için Windows Güvenlik Duvarı izni de eklenir.
+
+   Kurulum bitince iki uygulama da başlar; sonraki açılışlarda masaüstündeki **DigiMR Tablet**
+   kısayolu kullanılır.
 3. Tarayıcıda test sayfasını açın:
    - aynı bilgisayarda: `http://localhost:5080`
    - ağdaki başka bir PC'den: `http://<tablet-ip>:5080`
@@ -28,14 +34,15 @@ atılabilir).
 El imzasında isteğe bağlı kimlik doğrulaması seçilebilir: **MRZ** (kimlik kartının arka yüzü
 kameraya gösterilir) ya da **NFC** (kart çipi okutulur).
 
-Ayrıntılar (kaldırma, yönetici şifresini sıfırlama, sorun giderme) zip içindeki `README.md`
-dosyasındadır.
+Ayrıntılar (kaldırma, yönetici şifresini sıfırlama, sessiz kurulum) kurulum klasöründeki
+`BENIOKU.txt` dosyasındadır (Başlat menüsü > DigiMR Tablet > Benioku). Kurulum paketi ve DigiMR
+ikilileri Moreum Bilişim Teknolojileri A.Ş. adına kod imzalıdır.
 
 ## İndirmeler
 
 | Dosya | Açıklama |
 |-------|----------|
-| [digimr-tablet-test-paketi-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.zip) | Test paketi: tablet uygulaması + test web uygulaması + kurulum (Windows 10/11 x64) |
+| [digimr-tablet-test-paketi-windows-amd64.msi](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-test-paketi-windows-amd64.msi) | Test paketi kurulumu: tablet uygulaması + test web uygulaması (Windows 10/11 x64) |
 | [digimr-tablet-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-windows-amd64.zip) | Tablet uygulaması — Windows 10/11 x64 (Microsoft Edge WebView2 Runtime gerekir) |
 | [digimr-tablet-linux-amd64.tar.gz](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-linux-amd64.tar.gz) | Tablet uygulaması — Linux x64 (.NET 10 + ASP.NET Core 10 runtime ve WebKitGTK gerekir) |
 | [digimr-tablet-ornek-gonderici-windows-amd64.zip](https://github.com/moreum-tech/MBox/releases/download/digimr-tablet-v1.1.0/digimr-tablet-ornek-gonderici-windows-amd64.zip) | Örnek gönderici web uygulaması — Windows x64 |
