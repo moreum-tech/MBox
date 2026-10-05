@@ -65,8 +65,9 @@ işleri tabletin `POST /api/v1/relay-sign` ucuna gönderin. Ayrıntılar:
 
 - Test web uygulamasında kullanıcı doğrulaması yoktur; yalnız güvenilir ağda deneme için kullanın.
 - Motor DLL'leri obfuscate edilmiştir.
-- İkililer kod imzalı değildir; Windows SmartScreen ilk açılışta uyarı gösterebilir
-  ("Ek bilgi" → "Yine de çalıştır").
+- Windows ikilileri (DigiMR `.exe` ve `DigitalSignature.*.dll`) **Moreum Bilişim Teknolojileri A.Ş.**
+  adına kod imzalı ve zaman damgalıdır. Kurumsal güvenlik yazılımlarında (EDR, AppLocker / WDAC)
+  yayıncı sertifikasına göre izin tanımlanabilir; bu izin sonraki sürümleri de kapsar.
 
 [Tüm DigiMR Tablet sürümleri](https://github.com/moreum-tech/MBox/releases?q=digimr-tablet)
 

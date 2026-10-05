@@ -64,8 +64,9 @@ jobs to the tablet's `POST /api/v1/relay-sign` endpoint. See:
 
 - The test web app has no user authentication; use it only for trials on a trusted network.
 - Engine DLLs are obfuscated.
-- Binaries are not code-signed; Windows SmartScreen may warn on first launch
-  ("More info" → "Run anyway").
+- Windows binaries (DigiMR `.exe` and `DigitalSignature.*.dll`) are code-signed and timestamped by
+  **Moreum Bilişim Teknolojileri A.Ş.** Enterprise security software (EDR, AppLocker / WDAC) can
+  allow them with a publisher-certificate rule, which also covers future releases.
 
 [All DigiMR Tablet releases](https://github.com/moreum-tech/MBox/releases?q=digimr-tablet)
 
