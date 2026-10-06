@@ -23,8 +23,9 @@ atılabilir).
    - **Bu bilgisayarı kullanan herkes için** — yönetici izni gerekir; kurulum yeri
      `C:\Program Files\DigiMR\Tablet`, 5080 portu için Windows Güvenlik Duvarı izni de eklenir.
 
-   Kurulum bitince iki uygulama da başlar; sonraki açılışlarda masaüstündeki **DigiMR Tablet**
-   kısayolu kullanılır.
+   Ardından tablet uygulamasının yönetici şifresini belirleyin (en az 4 karakter; Ayarlar
+   sayfasına girişte ve güncellemelerde istenir). Kurulum bitince iki uygulama da başlar;
+   sonraki açılışlarda masaüstündeki **DigiMR Tablet** kısayolu kullanılır.
 3. Tarayıcıda test sayfasını açın:
    - aynı bilgisayarda: `http://localhost:5080`
    - ağdaki başka bir PC'den: `http://<tablet-ip>:5080`
@@ -33,6 +34,19 @@ atılabilir).
 
 El imzasında isteğe bağlı kimlik doğrulaması seçilebilir: **MRZ** (kimlik kartının arka yüzü
 kameraya gösterilir) ya da **NFC** (kart çipi okutulur).
+
+### Güncelleme
+
+Yeni MSI'ı eski kurulumun üzerine çalıştırın; kaldırmanız gerekmez. Paket mevcut kurulumu bulur
+ve aynı yere kurar.
+
+- **Yönetici şifresini biliyorsanız:** şifreyi girin; tüm ayarlar korunur.
+- **Bilmiyorsanız:** yeni kurulum gibi devam edilir. Önceki ayarlar
+  `tablet-windows\ayar-yedegi-<tarih>\` klasörüne taşınır, ayarlar varsayılana döner ve yeni
+  şifre belirlenir.
+
+Her iki durumda da lisans ve imzalı belgeler korunur. Eski kurulum "herkes için" yapıldıysa
+güncelleme yönetici onayı ister.
 
 Ayrıntılar (kaldırma, yönetici şifresini sıfırlama, sessiz kurulum) kurulum klasöründeki
 `BENIOKU.txt` dosyasındadır (Başlat menüsü > DigiMR Tablet > Benioku). Kurulum paketi ve DigiMR

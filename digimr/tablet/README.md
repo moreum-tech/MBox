@@ -22,7 +22,9 @@ tablet or on any Windows computer and test end to end (signing also works with a
    - **Everyone on this computer** — requires administrator rights; installs to
      `C:\Program Files\DigiMR\Tablet` and adds a Windows Firewall rule for port 5080.
 
-   When setup finishes both apps start; the desktop shortcut **DigiMR Tablet** starts them later.
+   Then set the tablet app's administrator password (at least 4 characters; asked when opening
+   the Settings page and on updates). When setup finishes both apps start; the desktop shortcut
+   **DigiMR Tablet** starts them later.
 3. Open the test page in a browser:
    - on the same computer: `http://localhost:5080`
    - from another PC on the network: `http://<tablet-ip>:5080`
@@ -31,6 +33,18 @@ tablet or on any Windows computer and test end to end (signing also works with a
 
 For handwritten signatures an optional identity check can be selected: **MRZ** (back of the ID
 card shown to the camera) or **NFC** (card chip read).
+
+### Updating
+
+Run the new MSI over the existing installation; there is no need to uninstall first. The installer
+finds the existing installation and installs to the same location.
+
+- **If you know the administrator password:** enter it; all settings are kept.
+- **If you don't:** setup continues like a fresh install. The previous settings are moved to
+  `tablet-windows\ayar-yedegi-<date>\`, settings return to defaults and a new password is set.
+
+In both cases the license and signed documents are kept. If the existing installation was made
+for everyone, the update asks for administrator approval.
 
 Details (uninstall, admin password reset, silent install) are in `BENIOKU.txt` in the install
 folder (Turkish; also under Start menu > DigiMR Tablet > Benioku). The installer and the DigiMR
